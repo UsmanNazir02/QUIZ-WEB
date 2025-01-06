@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Enhanced Interactive Quiz</title>
+
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div id="welcome-screen" class="welcome-screen">
+            <h2>Welcome to the Quiz!</h2>
+            <p>Test your knowledge across different categories.</p>
+            <p>You'll have 30 seconds per question.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-content" style="display: none;">
+            <div class="quiz-header">
+                <h1>Enhanced Knowledge Quiz</h1>
+                <div class="timer" id="timer">Time: 30s</div>
+                <div class="category-badge" id="category"></div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+                <div class="quiz-status">
+                    <span>Question: <span id="current-question">1</span>/<span id="total-questions">5</span></span>
+                    <span>Score: <span id="score">0</span></span>
+                </div>
+            </div>
+
+            <div id="question-container">
+                <p class="question" id="question-text"></p>
+                <div class="hint-container">
+                    <button class="hint-btn" id="hint-btn">Show Hint</button>
+                    <div class="hint-text" id="hint-text"></div>
+                </div>
+                <div class="options" id="options-container"></div>
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn" disabled>Next</button>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <h2>Quiz Complete!</h2>
+            <div class="score-details">
+                <p>Final Score: <span id="final-score">0</span>/<span id="max-score">0</span></p>
+                <p>Time Spent: <span id="time-spent">0</span> seconds</p>
+                <p>Hints Used: <span id="hints-used">0</span></p>
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
